@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PULSE - AI智能新聞快訊，即時推送重要商業新聞到您的手機。想看美國新聞但又怕看不懂？PULSE幫你抓取即時國際新聞。">
+    <title>PULSE - 即時商業新聞快訊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="app-icon.png">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="lang-btn" data-lang="zh-TW" aria-label="繁體中文">繁</button>
+        <button class="lang-btn" data-lang="zh-CN" aria-label="简体中文">简</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="masthead">
+                <img src="app-icon.png" alt="PULSE" class="app-logo">
+                <h1 class="logo">PULSE</h1>
+                <p class="tagline">BUSINESS NEWS</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title" data-i18n="hero.title">新聞即時通知，投資決策更精準</h2>
+                <p class="hero-description" data-i18n="hero.description">
+                    想看美國新聞但又怕看不懂？PULSE 運用 AI 智能技術，幫您抓取即時國際新聞並提供精準中文摘要。
+                    即時數據幫您做即時決策，讓重要投資資訊不再錯過。
+                </p>
+                <div class="free-trial-badge">
+                    <span data-i18n="hero.freetrial">🎉 首次註冊免費試用！立即體驗 AI 新聞快訊</span>
+                </div>
+                <div class="cta-buttons">
+                    <a href="https://apps.apple.com" class="btn btn-primary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 2l4 4-4 4"/>
+                            <path d="M3 11v-1a4 4 0 014-4h14"/>
+                            <path d="M7 22l-4-4 4-4"/>
+                            <path d="M21 13v1a4 4 0 01-4 4H3"/>
+                        </svg>
+                        <span data-i18n="cta.ios">iOS 下載</span>
+                    </a>
+                    <a href="https://play.google.com" class="btn btn-secondary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12" y2="18"/>
+                        </svg>
+                        <span data-i18n="cta.android">Android 下載</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title" data-i18n="features.title">運作原理</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="features.realtime.title">即時監控</h3>
+                        <p data-i18n="features.realtime.desc">24小時不間斷監控國際重要新聞，第一時間掌握市場動態。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11H3v10h6V11zM15 3H9v18h6V3zM21 7h-6v14h6V7z"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="features.ai.title">AI 智能篩選</h3>
+                        <p data-i18n="features.ai.desc">AI 分析新聞重要性，自動翻譯並摘要，只推送真正重要的商業資訊。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="features.push.title">即時推送通知</h3>
+                        <p data-i18n="features.push.desc">重要新聞立即推送到您的手機，確保不錯過任何關鍵時刻。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">專業新聞智能服務</h2>
+                <p class="about-text" data-i18n="about.text">
+                    PULSE 專為商業人士打造，結合尖端 AI 技術與即時新聞監控，
+                    精準篩選並推送對您職涯發展至關重要的資訊。
+                    告別資訊焦慮，只接收真正重要的商業新聞。
+                </p>
+            </div>
+        </section>
+
+        <section class="subscription">
+            <div class="container">
+                <h2 class="section-title" data-i18n="subscription.title">訂閱方案</h2>
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <h3 class="plan-name" data-i18n="subscription.free.name">免費會員</h3>
+                        <p class="plan-price">$0<span data-i18n="subscription.free.period">/永久</span></p>
+                        <ul class="plan-features">
+                            <li data-i18n="subscription.free.feature1">無限瀏覽國際新聞中文版</li>
+                            <li data-i18n="subscription.free.feature2">AI 智能翻譯與摘要</li>
+                            <li data-i18n="subscription.free.feature3">基本新聞閱讀體驗</li>
+                            <li data-i18n="subscription.free.feature4">永久免費使用</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card featured">
+                        <div class="plan-badge" data-i18n="subscription.monthly.badge">推薦方案</div>
+                        <h3 class="plan-name" data-i18n="subscription.monthly.name">月付會員</h3>
+                        <p class="plan-price">$4.99<span data-i18n="subscription.monthly.period">/月</span></p>
+                        <ul class="plan-features">
+                            <li data-i18n="subscription.monthly.feature1">AI 精選重要新聞快訊</li>
+                            <li data-i18n="subscription.monthly.feature2">完整 AI 智能摘要與翻譯</li>
+                            <li data-i18n="subscription.monthly.feature3">即時推送通知</li>
+                            <li data-i18n="subscription.monthly.feature4">多裝置同步支援</li>
+                            <li data-i18n="subscription.monthly.feature5">24/7 全天候新聞監控</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="trial-info">
+                    <p class="trial-highlight" data-i18n="subscription.trial">
+                        ✨ 首次註冊用戶可免費試用月付會員所有功能！
+                    </p>
+                    <p class="subscription-note" data-i18n="subscription.note">
+                        下載 App 後即可開始免費試用，無需綁定付款方式。試用期結束後自動轉為免費會員。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PULSE</h4>
+                    <p class="footer-tagline" data-i18n="footer.tagline">即時商業新聞快訊</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.legal">法律條款</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" data-i18n="footer.privacy">隱私政策</a></li>
+                        <li><a href="terms.html" data-i18n="footer.terms">服務條款</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.support">支援</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@pulse-news.app">support@pulse-news.app</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PULSE. <span data-i18n="footer.rights">保留所有權利。</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+</body>
+</html>
