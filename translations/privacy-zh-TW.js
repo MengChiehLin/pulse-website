@@ -1,0 +1,222 @@
+// Traditional Chinese Privacy Policy Content
+const privacyzhTW = {
+    title: '隱私政策',
+    lastUpdated: '最後更新：2025年1月13日',
+    backToHome: '← 返回首頁',
+    pageTitle: '隱私政策 - PULSE',
+    mainContent: `
+        <h1>隱私政策</h1>
+        <p><strong>最後更新：2025年1月13日</strong></p>
+        
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h3>目錄</h3>
+            <ul>
+                <li><a href="#introduction">1. 簡介</a></li>
+                <li><a href="#data-collection">2. 我們收集的資訊</a></li>
+                <li><a href="#data-usage">3. 如何使用您的資訊</a></li>
+                <li><a href="#third-party">4. 第三方服務</a></li>
+                <li><a href="#data-retention">5. 資料保留</a></li>
+                <li><a href="#user-rights">6. 您的權利</a></li>
+                <li><a href="#data-security">7. 資料安全</a></li>
+                <li><a href="#international-transfers">8. 國際資料傳輸</a></li>
+                <li><a href="#children-privacy">9. 兒童隱私</a></li>
+                <li><a href="#stripe-payments">10. Stripe 付款處理</a></li>
+                <li><a href="#ai-processing">11. AI 資料處理</a></li>
+                <li><a href="#policy-changes">12. 隱私政策變更</a></li>
+                <li><a href="#contact">13. 聯繫我們</a></li>
+            </ul>
+        </div>
+        
+        <h2 id="introduction">1. 簡介</h2>
+        <p>歡迎使用 PULSE，一款由 AI 驅動的新聞快訊應用程式。本隱私政策說明我們如何收集、使用、儲存和保護您的個人資訊。我們致力於保護您的隱私，並遵守相關的資料保護法律，包括歐盟一般資料保護規範 (GDPR) 和加州消費者隱私法 (CCPA)。</p>
+        
+        <h2 id="data-collection">2. 我們收集的資訊</h2>
+        <h3>2.1 帳戶資訊</h3>
+        <p>當您建立 PULSE 帳戶時，我們收集：</p>
+        <ul>
+            <li>電子郵件地址（用於帳戶建立和通訊）</li>
+            <li>使用者 ID（由 AWS Cognito 產生）</li>
+            <li>帳戶偏好設定</li>
+        </ul>
+        
+        <h3>2.2 裝置資訊</h3>
+        <ul>
+            <li>裝置識別碼</li>
+            <li>作業系統版本</li>
+            <li>應用程式版本</li>
+            <li>推送通知權杖（iOS/Android）</li>
+            <li>時區和地區資訊</li>
+        </ul>
+        
+        <h3>2.3 使用資料</h3>
+        <ul>
+            <li>閱讀偏好和習慣</li>
+            <li>應用程式互動模式</li>
+            <li>新聞閱讀紀錄（保留 7 天）</li>
+            <li>功能使用統計</li>
+        </ul>
+        
+        <h3>2.4 付款資訊</h3>
+        <p>付款完全由 Stripe 處理。我們不會接收或儲存您的信用卡資訊，僅接收交易 ID 和訂閱狀態。</p>
+        
+        <h2 id="data-usage">3. 如何使用您的資訊</h2>
+        <p>我們基於以下法律依據使用您的個人資訊：</p>
+        
+        <h3>3.1 合約必要性</h3>
+        <ul>
+            <li>提供新聞快訊服務</li>
+            <li>管理您的帳戶和訂閱</li>
+            <li>處理付款（透過 Stripe）</li>
+            <li>發送推送通知</li>
+        </ul>
+        
+        <h3>3.2 合法利益</h3>
+        <ul>
+            <li>改善服務品質</li>
+            <li>防範詐欺</li>
+            <li>技術支援</li>
+            <li>服務分析</li>
+        </ul>
+        
+        <h3>3.3 同意</h3>
+        <ul>
+            <li>發送行銷通訊（可隨時退出）</li>
+            <li>推送通知（可在設定中管理）</li>
+            <li>選用功能</li>
+        </ul>
+        
+        <h2 id="third-party">4. 第三方服務</h2>
+        <p>我們與以下第三方服務提供商合作：</p>
+        
+        <h3>4.1 AWS（Amazon Web Services）</h3>
+        <p>雲端託管和資料儲存服務，位於美國東部地區。</p>
+        
+        <h3>4.2 OpenAI</h3>
+        <p>AI 新聞摘要和翻譯服務。</p>
+        
+        <h3>4.3 Stripe</h3>
+        <p>付款處理服務，處理所有訂閱和交易。</p>
+        
+        <h3>4.4 推送通知服務</h3>
+        <ul>
+            <li>Apple Push Notification Service（iOS）</li>
+            <li>Firebase Cloud Messaging（Android）</li>
+        </ul>
+        
+        <h3>4.5 新聞內容提供商</h3>
+        <ul>
+            <li>MediaStack</li>
+            <li>RapidAPI</li>
+        </ul>
+        
+        <h2 id="data-retention">5. 資料保留</h2>
+        <ul>
+            <li><strong>帳戶資料：</strong>帳戶有效期間</li>
+            <li><strong>付款紀錄：</strong>由 Stripe 按其保留政策處理</li>
+            <li><strong>使用資料：</strong>2 年（用於服務改善）</li>
+            <li><strong>新聞閱讀紀錄：</strong>7 天（自動刪除）</li>
+            <li><strong>推送通知權杖：</strong>直到裝置取消註冊</li>
+            <li><strong>已刪除帳戶：</strong>立即永久刪除，無法恢復</li>
+        </ul>
+        
+        <h2 id="user-rights">6. 您的權利</h2>
+        <p>根據 GDPR 和 CCPA，您享有以下權利：</p>
+        
+        <h3>6.1 存取權</h3>
+        <p>您有權要求存取我們持有的您的個人資料。</p>
+        
+        <h3>6.2 更正權</h3>
+        <p>您可以透過應用程式或電子郵件更新您的個人資訊。</p>
+        
+        <h3>6.3 刪除權（「被遺忘權」）</h3>
+        <p>您可以要求刪除您的個人資料。請注意：</p>
+        <ul>
+            <li>帳戶刪除是永久性的，無法恢復</li>
+            <li>請發送電子郵件至 support@pulse-news.app</li>
+            <li>刪除將立即執行，沒有寬限期</li>
+        </ul>
+        
+        <h3>6.4 資料可攜性權</h3>
+        <p>您可以要求以機器可讀格式匯出您的資料。</p>
+        
+        <h3>6.5 反對處理權</h3>
+        <p>您可以反對我們基於合法利益進行的資料處理。</p>
+        
+        <h3>6.6 撤回同意權</h3>
+        <p>您可以隨時撤回對資料處理的同意。</p>
+        
+        <p><strong>如何行使您的權利：</strong><br>
+        請發送電子郵件至 support@pulse-news.app，我們將在 30 天內回覆您的請求。</p>
+        
+        <h2 id="data-security">7. 資料安全</h2>
+        <p>我們實施業界標準的安全措施保護您的個人資訊：</p>
+        <ul>
+            <li>所有資料在傳輸過程中和靜態儲存時都使用加密</li>
+            <li>存取控制和身份驗證</li>
+            <li>定期安全審核</li>
+            <li>員工資料保護培訓</li>
+            <li>事件回應程序</li>
+        </ul>
+        
+        <h2 id="international-transfers">8. 國際資料傳輸</h2>
+        <p>您的資料可能被傳輸到您所在國家以外的地區：</p>
+        <ul>
+            <li>主要資料儲存在 AWS 美國東部地區</li>
+            <li>歐盟用戶的資料可能傳輸到美國</li>
+            <li>我們確保適當的保護措施到位</li>
+            <li>遵守標準合約條款</li>
+        </ul>
+        
+        <h2 id="children-privacy">9. 兒童隱私</h2>
+        <p>PULSE 不適用於 13 歲以下的兒童（歐盟地區為 16 歲以下）。我們不會故意收集未成年人的個人資訊。如果您是家長並發現您的孩子向我們提供了個人資訊，請聯繫我們以刪除該資訊。</p>
+        
+        <h2 id="stripe-payments">10. Stripe 付款處理</h2>
+        <p>所有付款均由 Stripe 處理：</p>
+        <ul>
+            <li>我們從不接收或儲存信用卡資訊</li>
+            <li>Stripe 的隱私政策適用於付款資料</li>
+            <li>我們僅接收交易 ID 和訂閱狀態</li>
+            <li>付款資料保留由 Stripe 按 PCI 合規要求處理</li>
+            <li>退款處理透過電子郵件個案處理</li>
+        </ul>
+        
+        <h2 id="ai-processing">11. AI 資料處理</h2>
+        <p>我們使用 AI 技術提供服務：</p>
+        <ul>
+            <li>OpenAI 處理新聞進行摘要和翻譯</li>
+            <li>AI 識別新聞重要性等級</li>
+            <li>沒有影響用戶權利的自動化決策</li>
+            <li>AI 分類系統有人工監督</li>
+            <li>不會對個人資料進行剖析用於行銷目的</li>
+        </ul>
+        
+        <h2 id="policy-changes">12. 隱私政策變更</h2>
+        <p>我們可能會不時更新此隱私政策：</p>
+        <ul>
+            <li>重大變更將透過電子郵件通知</li>
+            <li>變更將在網站上公佈</li>
+            <li>建議定期查看本政策</li>
+            <li>繼續使用服務即表示接受變更</li>
+        </ul>
+        
+        <h2 id="contact">13. 聯繫我們</h2>
+        <p>如果您對此隱私政策有任何疑問或需要行使您的權利，請透過以下方式聯繫我們：</p>
+        
+        <p><strong>電子郵件：</strong>support@pulse-news.app<br>
+        <strong>網站：</strong>https://pulse-news.app<br>
+        <strong>回覆時間：</strong>我們將在 30 天內回覆您的請求</p>
+        
+        <div class="last-updated">
+            <p><em>本隱私政策於 2025年1月13日 最後更新</em></p>
+        </div>
+    `
+};
+
+// Make sure the variable is available globally
+window.privacyzhTW = privacyzhTW;
+
+// Export for use in other files
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = privacyzhTW;
+}
