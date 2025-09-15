@@ -74,7 +74,7 @@ const termsen = {
         <div class="highlight-box">
             <p><strong>Free Plan:</strong></p>
             <ul>
-                <li>Unlimited browsing of non-critical international news in Chinese</li>
+                <li>Unlimited general news + daily limited important articles</li>
                 <li>Basic AI translation and summarization features</li>
                 <li>Permanent free use</li>
             </ul>
@@ -89,28 +89,29 @@ const termsen = {
             </ul>
         </div>
         
-        <h3>4.2 Free Trial</h3>
+        <h3>4.2 Free Member Limitations</h3>
         <ul>
-            <li>First-time registered users can try all monthly membership features for free</li>
-            <li>No payment information required during trial</li>
-            <li>Automatically converts to free membership after trial ends</li>
-            <li>Users can upgrade to paid plan at any time</li>
+            <li>Free members have daily limited access to important articles</li>
+            <li>No payment information required for free membership</li>
+            <li>Users can upgrade to monthly membership for unlimited access at any time</li>
+            <li>Subscription provides access to all features without daily limits</li>
         </ul>
         
         <h3>4.3 Payment Processing</h3>
         <ul>
-            <li>All payments are securely processed through Stripe</li>
-            <li>We do not store your credit card information</li>
-            <li>Subscriptions will auto-renew unless you cancel</li>
-            <li>Prices may vary by region</li>
+            <li>All payments are processed through Apple App Store (iOS) and Google Play Store (Android)</li>
+            <li>We do not receive or store any payment card information</li>
+            <li>Subscriptions will auto-renew unless you cancel through your app store account</li>
+            <li>Prices may vary by region according to app store policies</li>
         </ul>
         
         <h3>4.4 Cancellation and Refunds</h3>
         <ul>
-            <li>You can cancel your subscription at any time</li>
+            <li>You can cancel your subscription at any time through your Apple ID or Google Play account settings</li>
             <li>Service will continue until the end of the current billing period</li>
-            <li>For refund requests, please contact support@pulse-news.app</li>
-            <li>Refunds will be processed on a case-by-case basis</li>
+            <li>Refund requests must be made directly through Apple App Store or Google Play Store</li>
+            <li>Refund policies are subject to Apple and Google's respective app store terms</li>
+            <li>We cannot process refunds directly as payments are handled by the app stores</li>
         </ul>
         
         <h2 id="acceptable-use">5. Acceptable Use</h2>

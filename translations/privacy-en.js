@@ -21,7 +21,7 @@ const privacyen = {
                 <li><a href="#data-security">7. Data Security</a></li>
                 <li><a href="#international-transfers">8. International Data Transfers</a></li>
                 <li><a href="#children-privacy">9. Children's Privacy</a></li>
-                <li><a href="#stripe-payments">10. Stripe Payment Processing</a></li>
+                <li><a href="#iap-payments">10. Apple & Google In-App Purchases</a></li>
                 <li><a href="#ai-processing">11. AI Data Processing</a></li>
                 <li><a href="#policy-changes">12. Privacy Policy Changes</a></li>
                 <li><a href="#contact">13. Contact Us</a></li>
@@ -58,7 +58,7 @@ const privacyen = {
         </ul>
         
         <h3>2.4 Payment Information</h3>
-        <p>Payment is processed entirely by Stripe. We do not receive or store your credit card information, only transaction IDs and subscription status.</p>
+        <p>Payments are processed entirely by Apple App Store (iOS) and Google Play Store (Android) through their respective in-app purchase systems. We do not receive or store any payment card information, only subscription status and transaction identifiers from the app stores.</p>
         
         <h2 id="data-usage">3. How We Use Your Information</h2>
         <p>We use your personal information based on the following legal bases:</p>
@@ -95,8 +95,8 @@ const privacyen = {
         <h3>4.2 OpenAI</h3>
         <p>AI news summarization and translation services.</p>
         
-        <h3>4.3 Stripe</h3>
-        <p>Payment processing services, handling all subscriptions and transactions.</p>
+        <h3>4.3 Apple App Store & Google Play Store</h3>
+        <p>In-app purchase processing services, handling all subscriptions and transactions through their respective payment systems.</p>
         
         <h3>4.4 Push Notification Services</h3>
         <ul>
@@ -113,7 +113,7 @@ const privacyen = {
         <h2 id="data-retention">5. Data Retention</h2>
         <ul>
             <li><strong>Account data:</strong> Duration of account validity</li>
-            <li><strong>Payment records:</strong> Handled by Stripe according to their retention policy</li>
+            <li><strong>Payment records:</strong> Handled by Apple and Google according to their respective app store policies</li>
             <li><strong>Usage data:</strong> 2 years (for service improvement)</li>
             <li><strong>News reading history:</strong> 7 days (automatically deleted)</li>
             <li><strong>Push notification tokens:</strong> Until device unregistration</li>
@@ -171,14 +171,15 @@ const privacyen = {
         <h2 id="children-privacy">9. Children's Privacy</h2>
         <p>PULSE is not intended for children under 13 years old (under 16 in the EU). We do not knowingly collect personal information from minors. If you are a parent and discover that your child has provided personal information to us, please contact us to delete that information.</p>
         
-        <h2 id="stripe-payments">10. Stripe Payment Processing</h2>
-        <p>All payments are processed by Stripe:</p>
+        <h2 id="iap-payments">10. Apple & Google In-App Purchases</h2>
+        <p>All payments are processed through app store in-app purchase systems:</p>
         <ul>
-            <li>We never receive or store credit card information</li>
-            <li>Stripe's privacy policy applies to payment data</li>
-            <li>We only receive transaction IDs and subscription status</li>
-            <li>Payment data retention is handled by Stripe according to PCI compliance requirements</li>
-            <li>Refund processing is handled through email case-by-case</li>
+            <li>We never receive or store payment card information</li>
+            <li>Apple App Store and Google Play Store privacy policies apply to payment data</li>
+            <li>We only receive subscription status and transaction identifiers from app stores</li>
+            <li>Payment data is handled entirely by Apple and Google according to their security standards</li>
+            <li>Refunds and subscription management are handled through the respective app stores</li>
+            <li>Users can manage subscriptions directly in their Apple ID or Google Play account settings</li>
         </ul>
         
         <h2 id="ai-processing">11. AI Data Processing</h2>

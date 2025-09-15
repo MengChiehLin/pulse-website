@@ -74,7 +74,7 @@ const termszhTW = {
         <div class="highlight-box">
             <p><strong>免費方案：</strong></p>
             <ul>
-                <li>無限瀏覽非重要等級的國際新聞中文版</li>
+                <li>無限瀏覽一般新聞 + 每日限量重要新聞</li>
                 <li>基本 AI 翻譯與摘要功能</li>
                 <li>永久免費使用</li>
             </ul>
@@ -89,28 +89,29 @@ const termszhTW = {
             </ul>
         </div>
         
-        <h3>4.2 免費試用</h3>
+        <h3>4.2 免費會員限制</h3>
         <ul>
-            <li>首次註冊用戶可免費試用月付會員所有功能</li>
-            <li>試用期間無需提供付款資訊</li>
-            <li>試用期結束後自動轉為免費會員</li>
-            <li>用戶可隨時升級至付費方案</li>
+            <li>免費會員每日可限量閱讀重要新聞</li>
+            <li>免費會員無需提供付款資訊</li>
+            <li>用戶可隨時升級至月付會員享有無限制完整服務</li>
+            <li>訂閱服務可使用所有功能且無每日限制</li>
         </ul>
         
         <h3>4.3 付款處理</h3>
         <ul>
-            <li>所有付款均透過 Stripe 安全處理</li>
-            <li>我們不會儲存您的信用卡資訊</li>
-            <li>訂閱將自動續費，除非您取消</li>
-            <li>價格可能因地區而異</li>
+            <li>所有付款均透過 Apple App Store（iOS）和 Google Play Store（Android）處理</li>
+            <li>我們不會接收或儲存任何付款卡片資訊</li>
+            <li>訂閱將自動續費，除非您透過應用商店帳戶取消</li>
+            <li>價格可能因地區而異，按應用商店政策訂定</li>
         </ul>
         
         <h3>4.4 取消與退款</h3>
         <ul>
-            <li>您可以隨時取消訂閱</li>
+            <li>您可以隨時透過您的 Apple ID 或 Google Play 帳戶設定取消訂閱</li>
             <li>取消後服務將持續到當前付費期結束</li>
-            <li>退款申請請聯繫 support@pulse-news.app</li>
-            <li>退款將按個案處理</li>
+            <li>退款申請必須直接透過 Apple App Store 或 Google Play Store 申請</li>
+            <li>退款政策遵循 Apple 和 Google 各自的應用商店條款</li>
+            <li>我們無法直接處理退款，因為付款由應用商店處理</li>
         </ul>
         
         <h2 id="acceptable-use">5. 可接受的使用方式</h2>

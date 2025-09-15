@@ -21,7 +21,7 @@ const privacyzhCN = {
                 <li><a href="#data-security">7. 数据安全</a></li>
                 <li><a href="#international-transfers">8. 国际数据传输</a></li>
                 <li><a href="#children-privacy">9. 儿童隐私</a></li>
-                <li><a href="#stripe-payments">10. Stripe 付款处理</a></li>
+                <li><a href="#iap-payments">10. Apple 与 Google 应用程序内购买</a></li>
                 <li><a href="#ai-processing">11. AI 数据处理</a></li>
                 <li><a href="#policy-changes">12. 隐私政策变更</a></li>
                 <li><a href="#contact">13. 联系我们</a></li>
@@ -58,7 +58,7 @@ const privacyzhCN = {
         </ul>
         
         <h3>2.4 付款信息</h3>
-        <p>付款完全由 Stripe 处理。我们不会接收或储存您的信用卡信息，仅接收交易 ID 和订阅状态。</p>
+        <p>付款完全由 Apple App Store（iOS）和 Google Play Store（Android）通过各自的应用程序内购买系统处理。我们不会接收或储存任何付款卡片信息，仅接收应用商店提供的订阅状态和交易识别码。</p>
         
         <h2 id="data-usage">3. 如何使用您的信息</h2>
         <p>我们基于以下法律依据使用您的个人信息：</p>
@@ -67,7 +67,7 @@ const privacyzhCN = {
         <ul>
             <li>提供新闻快讯服务</li>
             <li>管理您的账户和订阅</li>
-            <li>处理付款（通过 Stripe）</li>
+            <li>处理付款（通过应用商店）</li>
             <li>发送推送通知</li>
         </ul>
         
@@ -95,8 +95,8 @@ const privacyzhCN = {
         <h3>4.2 OpenAI</h3>
         <p>AI 新闻摘要和翻译服务。</p>
         
-        <h3>4.3 Stripe</h3>
-        <p>付款处理服务，处理所有订阅和交易。</p>
+        <h3>4.3 Apple App Store 与 Google Play Store</h3>
+        <p>应用程序内购买处理服务，通过各自的付款系统处理所有订阅和交易。</p>
         
         <h3>4.4 推送通知服务</h3>
         <ul>
@@ -113,7 +113,7 @@ const privacyzhCN = {
         <h2 id="data-retention">5. 数据保留</h2>
         <ul>
             <li><strong>账户数据：</strong>账户有效期间</li>
-            <li><strong>付款记录：</strong>由 Stripe 按其保留政策处理</li>
+            <li><strong>付款记录：</strong>由 Apple 和 Google 按各自应用商店政策处理</li>
             <li><strong>使用数据：</strong>2 年（用于服务改善）</li>
             <li><strong>新闻阅读记录：</strong>7 天（自动删除）</li>
             <li><strong>推送通知令牌：</strong>直到设备取消注册</li>
@@ -171,14 +171,15 @@ const privacyzhCN = {
         <h2 id="children-privacy">9. 儿童隐私</h2>
         <p>PULSE 不适用于 13 岁以下的儿童（欧盟地区为 16 岁以下）。我们不会故意收集未成年人的个人信息。如果您是家长并发现您的孩子向我们提供了个人信息，请联系我们以删除该信息。</p>
         
-        <h2 id="stripe-payments">10. Stripe 付款处理</h2>
-        <p>所有付款均由 Stripe 处理：</p>
+        <h2 id="iap-payments">10. Apple 与 Google 应用程序内购买</h2>
+        <p>所有付款均通过应用商店的应用程序内购买系统处理：</p>
         <ul>
-            <li>我们从不接收或储存信用卡信息</li>
-            <li>Stripe 的隐私政策适用于付款数据</li>
-            <li>我们仅接收交易 ID 和订阅状态</li>
-            <li>付款数据保留由 Stripe 按 PCI 合规要求处理</li>
-            <li>退款处理通过电子邮件个案处理</li>
+            <li>我们从不接收或储存付款卡片信息</li>
+            <li>Apple App Store 和 Google Play Store 的隐私政策适用于付款数据</li>
+            <li>我们仅接收应用商店提供的订阅状态和交易识别码</li>
+            <li>付款数据完全由 Apple 和 Google 按其安全标准处理</li>
+            <li>退款和订阅管理通过各自的应用商店处理</li>
+            <li>用户可在其 Apple ID 或 Google Play 账户设定中直接管理订阅</li>
         </ul>
         
         <h2 id="ai-processing">11. AI 数据处理</h2>
