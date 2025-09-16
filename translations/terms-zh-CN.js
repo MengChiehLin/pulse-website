@@ -16,18 +16,19 @@ const termszhCN = {
                 <li><a href="#service-description">2. 服务说明</a></li>
                 <li><a href="#account-terms">3. 账户条款</a></li>
                 <li><a href="#subscription-terms">4. 订阅与付费条款</a></li>
-                <li><a href="#acceptable-use">5. 可接受的使用方式</a></li>
-                <li><a href="#prohibited-use">6. 禁止使用行为</a></li>
-                <li><a href="#intellectual-property">7. 知识产权</a></li>
-                <li><a href="#content-disclaimer">8. 内容免责声明</a></li>
-                <li><a href="#investment-disclaimer">9. 投资建议免责声明</a></li>
-                <li><a href="#privacy">10. 隐私政策</a></li>
-                <li><a href="#liability">11. 责任限制</a></li>
-                <li><a href="#indemnification">12. 赔偿条款</a></li>
-                <li><a href="#termination">13. 服务终止</a></li>
-                <li><a href="#dispute-resolution">14. 争议解决</a></li>
-                <li><a href="#changes">15. 条款变更</a></li>
-                <li><a href="#contact">16. 联系信息</a></li>
+                <li><a href="#apple-terms">5. Apple 使用条款</a></li>
+                <li><a href="#acceptable-use">6. 可接受的使用方式</a></li>
+                <li><a href="#prohibited-use">7. 禁止使用行为</a></li>
+                <li><a href="#intellectual-property">8. 知识产权</a></li>
+                <li><a href="#content-disclaimer">9. 内容免责声明</a></li>
+                <li><a href="#investment-disclaimer">10. 投资建议免责声明</a></li>
+                <li><a href="#privacy">11. 隐私政策</a></li>
+                <li><a href="#liability">12. 责任限制</a></li>
+                <li><a href="#indemnification">13. 赔偿条款</a></li>
+                <li><a href="#termination">14. 服务终止</a></li>
+                <li><a href="#dispute-resolution">15. 争议解决</a></li>
+                <li><a href="#changes">16. 条款变更</a></li>
+                <li><a href="#contact">17. 联系信息</a></li>
             </ul>
         </div>
         
@@ -113,8 +114,15 @@ const termszhCN = {
             <li>退款政策遵循 Apple 和 Google 各自的应用商店条款</li>
             <li>我们无法直接处理退款，因为付款由应用商店处理</li>
         </ul>
-        
-        <h2 id="acceptable-use">5. 可接受的使用方式</h2>
+
+        <h2 id="apple-terms">5. Apple 使用条款</h2>
+        <div class="highlight-box">
+            <p><strong>iOS 用户须知：</strong>如果您从 Apple App Store 下载 PULSE，您对应用程序的使用同时受到 Apple 标准终端用户许可协议 (EULA) 的约束。</p>
+            <p>您可以在此查看 Apple 的 EULA：<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" style="color: var(--gold);">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>
+            <p>Apple 的条款与本 PULSE 服务条款同时适用。如果 Apple 的 EULA 与本条款发生冲突，对于 iOS 用户，Apple 的 EULA 将优先适用。</p>
+        </div>
+
+        <h2 id="acceptable-use">6. 可接受的使用方式</h2>
         <p>您同意：</p>
         <ul>
             <li>仅为合法目的使用 PULSE</li>
@@ -124,7 +132,7 @@ const termszhCN = {
             <li>不会尝试规避技术限制或安全措施</li>
         </ul>
         
-        <h2 id="prohibited-use">6. 禁止使用行为</h2>
+        <h2 id="prohibited-use">7. 禁止使用行为</h2>
         <p>您不得：</p>
         <ul>
             <li>使用自动化工具或机器人访问服务</li>
@@ -136,7 +144,7 @@ const termszhCN = {
             <li>进行任何可能损害服务声誉的行为</li>
         </ul>
         
-        <h2 id="intellectual-property">7. 知识产权</h2>
+        <h2 id="intellectual-property">8. 知识产权</h2>
         
         <h3>7.1 我们的权利</h3>
         <ul>
@@ -152,7 +160,7 @@ const termszhCN = {
             <li>用户不得重新分发或商业使用第三方内容</li>
         </ul>
         
-        <h2 id="content-disclaimer">8. 内容免责声明</h2>
+        <h2 id="content-disclaimer">9. 内容免责声明</h2>
         
         <div class="warning-box">
             <p><strong>重要免责声明：</strong>PULSE 提供的新闻内容和 AI 摘要仅供参考，不构成任何形式的建议。</p>
@@ -166,7 +174,7 @@ const termszhCN = {
             <li>我们不对第三方内容的准确性负责</li>
         </ul>
         
-        <h2 id="investment-disclaimer">9. 投资建议免责声明</h2>
+        <h2 id="investment-disclaimer">10. 投资建议免责声明</h2>
         
         <div class="warning-box">
             <p><strong>投资风险警告：</strong>PULSE 不提供投资建议，所有投资决策应基于您自己的研究和判断。</p>
@@ -180,10 +188,10 @@ const termszhCN = {
             <li>我们对基于我们信息做出的投资决策不承担责任</li>
         </ul>
         
-        <h2 id="privacy">10. 隐私政策</h2>
+        <h2 id="privacy">11. 隐私政策</h2>
         <p>您的隐私对我们很重要。请参阅我们的<a href="privacy.html" style="color: var(--gold);">隐私政策</a>了解我们如何收集、使用和保护您的个人信息。使用我们的服务即表示您同意我们的隐私政策。</p>
         
-        <h2 id="liability">11. 责任限制</h2>
+        <h2 id="liability">12. 责任限制</h2>
         
         <h3>11.1 服务提供基础</h3>
         <p>PULSE 以"现况"和"可用"基础提供服务，不提供任何明示或暗示的保证，包括但不限于：</p>
@@ -206,10 +214,10 @@ const termszhCN = {
         <h3>11.3 责任上限</h3>
         <p>在任何情况下，我们的总责任不超过您在过去 12 个月内支付给我们的费用，或 $100 美元（以较高者为准）。</p>
         
-        <h2 id="indemnification">12. 赔偿条款</h2>
+        <h2 id="indemnification">13. 赔偿条款</h2>
         <p>您同意对因您违反这些条款或滥用服务而导致的任何索赔、损失或费用，向我们提供赔偿和保护。</p>
         
-        <h2 id="termination">13. 服务终止</h2>
+        <h2 id="termination">14. 服务终止</h2>
         
         <h3>13.1 用户终止</h3>
         <ul>
@@ -227,7 +235,7 @@ const termszhCN = {
             <li>技术或安全考量</li>
         </ul>
         
-        <h2 id="dispute-resolution">14. 争议解决</h2>
+        <h2 id="dispute-resolution">15. 争议解决</h2>
         
         <h3>14.1 协商解决</h3>
         <p>如果发生争议，我们鼓励通过友好协商解决。请先联系 support@pulse-news.app。</p>
@@ -238,7 +246,7 @@ const termszhCN = {
         <h3>14.3 管辖法院</h3>
         <p>任何法律争议将由台湾台北地方法院专属管辖。</p>
         
-        <h2 id="changes">15. 条款变更</h2>
+        <h2 id="changes">16. 条款变更</h2>
         <ul>
             <li>我们可能会不时更新这些服务条款</li>
             <li>重大变更将通过电子邮件或应用程序内通知</li>
@@ -247,7 +255,7 @@ const termszhCN = {
             <li>如不同意变更，请停止使用服务</li>
         </ul>
         
-        <h2 id="contact">16. 联系信息</h2>
+        <h2 id="contact">17. 联系信息</h2>
         <p>如果您对这些服务条款有任何疑问，请通过以下方式联系我们：</p>
         
         <p><strong>电子邮件：</strong>support@pulse-news.app<br>

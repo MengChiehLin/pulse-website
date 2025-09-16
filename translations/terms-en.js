@@ -16,18 +16,19 @@ const termsen = {
                 <li><a href="#service-description">2. Service Description</a></li>
                 <li><a href="#account-terms">3. Account Terms</a></li>
                 <li><a href="#subscription-terms">4. Subscription and Payment Terms</a></li>
-                <li><a href="#acceptable-use">5. Acceptable Use</a></li>
-                <li><a href="#prohibited-use">6. Prohibited Use</a></li>
-                <li><a href="#intellectual-property">7. Intellectual Property</a></li>
-                <li><a href="#content-disclaimer">8. Content Disclaimer</a></li>
-                <li><a href="#investment-disclaimer">9. Investment Advice Disclaimer</a></li>
-                <li><a href="#privacy">10. Privacy Policy</a></li>
-                <li><a href="#liability">11. Limitation of Liability</a></li>
-                <li><a href="#indemnification">12. Indemnification</a></li>
-                <li><a href="#termination">13. Service Termination</a></li>
-                <li><a href="#dispute-resolution">14. Dispute Resolution</a></li>
-                <li><a href="#changes">15. Changes to Terms</a></li>
-                <li><a href="#contact">16. Contact Information</a></li>
+                <li><a href="#apple-terms">5. Apple Terms of Use</a></li>
+                <li><a href="#acceptable-use">6. Acceptable Use</a></li>
+                <li><a href="#prohibited-use">7. Prohibited Use</a></li>
+                <li><a href="#intellectual-property">8. Intellectual Property</a></li>
+                <li><a href="#content-disclaimer">9. Content Disclaimer</a></li>
+                <li><a href="#investment-disclaimer">10. Investment Advice Disclaimer</a></li>
+                <li><a href="#privacy">11. Privacy Policy</a></li>
+                <li><a href="#liability">12. Limitation of Liability</a></li>
+                <li><a href="#indemnification">13. Indemnification</a></li>
+                <li><a href="#termination">14. Service Termination</a></li>
+                <li><a href="#dispute-resolution">15. Dispute Resolution</a></li>
+                <li><a href="#changes">16. Changes to Terms</a></li>
+                <li><a href="#contact">17. Contact Information</a></li>
             </ul>
         </div>
         
@@ -113,8 +114,15 @@ const termsen = {
             <li>Refund policies are subject to Apple and Google's respective app store terms</li>
             <li>We cannot process refunds directly as payments are handled by the app stores</li>
         </ul>
-        
-        <h2 id="acceptable-use">5. Acceptable Use</h2>
+
+        <h2 id="apple-terms">5. Apple Terms of Use</h2>
+        <div class="highlight-box">
+            <p><strong>For iOS Users:</strong> If you downloaded PULSE from the Apple App Store, your use of the app is also subject to Apple's Standard End User License Agreement (EULA).</p>
+            <p>You can review Apple's EULA at: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" style="color: var(--gold);">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>
+            <p>Apple's terms apply in addition to these PULSE Terms of Service. In case of any conflict between Apple's EULA and these terms, Apple's EULA will take precedence for iOS users.</p>
+        </div>
+
+        <h2 id="acceptable-use">6. Acceptable Use</h2>
         <p>You agree to:</p>
         <ul>
             <li>Use PULSE only for lawful purposes</li>
@@ -124,7 +132,7 @@ const termsen = {
             <li>Not attempt to circumvent technical limitations or security measures</li>
         </ul>
         
-        <h2 id="prohibited-use">6. Prohibited Use</h2>
+        <h2 id="prohibited-use">7. Prohibited Use</h2>
         <p>You may not:</p>
         <ul>
             <li>Use automated tools or bots to access the service</li>
@@ -136,7 +144,7 @@ const termsen = {
             <li>Engage in any behavior that could damage the service's reputation</li>
         </ul>
         
-        <h2 id="intellectual-property">7. Intellectual Property</h2>
+        <h2 id="intellectual-property">8. Intellectual Property</h2>
         
         <h3>7.1 Our Rights</h3>
         <ul>
@@ -152,7 +160,7 @@ const termsen = {
             <li>Users may not redistribute or commercially use third-party content</li>
         </ul>
         
-        <h2 id="content-disclaimer">8. Content Disclaimer</h2>
+        <h2 id="content-disclaimer">9. Content Disclaimer</h2>
         
         <div class="warning-box">
             <p><strong>IMPORTANT DISCLAIMER:</strong> News content and AI summaries provided by PULSE are for reference only and do not constitute any form of advice.</p>
@@ -166,7 +174,7 @@ const termsen = {
             <li>We are not responsible for the accuracy of third-party content</li>
         </ul>
         
-        <h2 id="investment-disclaimer">9. Investment Advice Disclaimer</h2>
+        <h2 id="investment-disclaimer">10. Investment Advice Disclaimer</h2>
         
         <div class="warning-box">
             <p><strong>INVESTMENT RISK WARNING:</strong> PULSE does not provide investment advice, and all investment decisions should be based on your own research and judgment.</p>
@@ -180,10 +188,10 @@ const termsen = {
             <li>We are not responsible for investment decisions based on our information</li>
         </ul>
         
-        <h2 id="privacy">10. Privacy Policy</h2>
+        <h2 id="privacy">11. Privacy Policy</h2>
         <p>Your privacy is important to us. Please refer to our <a href="privacy.html" style="color: var(--gold);">Privacy Policy</a> to understand how we collect, use, and protect your personal information. By using our service, you agree to our privacy policy.</p>
         
-        <h2 id="liability">11. Limitation of Liability</h2>
+        <h2 id="liability">12. Limitation of Liability</h2>
         
         <h3>11.1 Service Basis</h3>
         <p>PULSE is provided on an "as is" and "available" basis, without any express or implied warranties, including but not limited to:</p>
@@ -206,10 +214,10 @@ const termsen = {
         <h3>11.3 Liability Cap</h3>
         <p>Under any circumstances, our total liability shall not exceed the fees you paid to us in the past 12 months, or $100 USD (whichever is higher).</p>
         
-        <h2 id="indemnification">12. Indemnification</h2>
+        <h2 id="indemnification">13. Indemnification</h2>
         <p>You agree to indemnify and hold us harmless from any claims, losses, or expenses arising from your violation of these terms or misuse of the service.</p>
         
-        <h2 id="termination">13. Service Termination</h2>
+        <h2 id="termination">14. Service Termination</h2>
         
         <h3>13.1 User Termination</h3>
         <ul>
@@ -227,7 +235,7 @@ const termsen = {
             <li>Technical or security considerations</li>
         </ul>
         
-        <h2 id="dispute-resolution">14. Dispute Resolution</h2>
+        <h2 id="dispute-resolution">15. Dispute Resolution</h2>
         
         <h3>14.1 Negotiated Resolution</h3>
         <p>If disputes arise, we encourage resolution through friendly negotiation. Please contact support@pulse-news.app first.</p>
@@ -238,7 +246,7 @@ const termsen = {
         <h3>14.3 Jurisdiction</h3>
         <p>Any legal disputes will be under the exclusive jurisdiction of the Taipei District Court in Taiwan.</p>
         
-        <h2 id="changes">15. Changes to Terms</h2>
+        <h2 id="changes">16. Changes to Terms</h2>
         <ul>
             <li>We may update these terms of service from time to time</li>
             <li>Major changes will be notified via email or in-app notification</li>
@@ -247,7 +255,7 @@ const termsen = {
             <li>If you do not agree to changes, please stop using the service</li>
         </ul>
         
-        <h2 id="contact">16. Contact Information</h2>
+        <h2 id="contact">17. Contact Information</h2>
         <p>If you have any questions about these terms of service, please contact us through the following methods:</p>
         
         <p><strong>Email:</strong> support@pulse-news.app<br>
