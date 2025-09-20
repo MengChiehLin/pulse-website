@@ -592,7 +592,7 @@ body {
 .article-summary { color: var(--text-secondary); line-height: 1.8; white-space: pre-wrap; }
 
 .top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-.article-source { color: var(--text-muted); font-weight: 700; letter-spacing: 0.02em; }
+.article-source { color: var(--text-muted); font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; }
 .article-badge { 
     background: transparent; 
     border: 1px solid var(--border-light); 
@@ -611,3 +611,15 @@ body {
 
 .article-actions { margin-top: 16px; display: flex; justify-content: center; }
 .btn-primary { min-width: 260px; text-align: center; }
+
+/* White button variant for article page */
+.btn-white {
+    background-color: #ffffff;
+    color: var(--bg-primary);
+    box-shadow: 0 4px 6px var(--shadow-light);
+}
+.btn-white:hover {
+    background-color: #f2f2f2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px var(--shadow-medium);
+}
