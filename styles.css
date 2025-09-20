@@ -158,6 +158,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    justify-content: center; /* center content inside button across web/mobile */
     padding: 1rem 2rem;
     font-size: 1rem;
     font-weight: 600;
@@ -592,11 +593,21 @@ body {
 
 .top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
 .article-source { color: var(--text-muted); font-weight: 700; letter-spacing: 0.02em; }
-.article-badge { background: #d35400; color: #fff; border-radius: 6px; padding: 3px 8px; font-size: 0.75rem; font-weight: 700; }
+.article-badge { 
+    background: transparent; 
+    border: 1px solid var(--border-light); 
+    color: var(--text-secondary); 
+    border-radius: 2px; 
+    padding: 3px 8px; 
+    font-size: 0.75rem; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+}
 .article-meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px; }
 .article-title { margin-top: 6px; }
 .bottom-row { display: flex; justify-content: flex-end; margin-top: 10px; }
-.level-chip { background: #444; color: #bbb; padding: 2px 8px; border-radius: 6px; font-size: 0.75rem; }
+.level-chip { background: rgba(255,255,255,0.03); color: rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 8px; font-size: 0.75rem; }
 
 .article-actions { margin-top: 16px; display: flex; justify-content: center; }
 .btn-primary { min-width: 260px; text-align: center; }

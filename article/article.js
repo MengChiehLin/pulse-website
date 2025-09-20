@@ -76,9 +76,9 @@
 
   function criticalBadge(level) {
     if (typeof level !== 'number') return null;
-    if (level >= 5) return 'BREAKING';
-    if (level >= 4) return 'IMPORTANT';
-    return null;
+    if (level >= 5) return { text: 'BREAKING', color: '#ff4757' };
+    if (level >= 4) return { text: 'IMPORTANT', color: '#ff6b35' };
+    return { text: 'GENERAL', color: '#ffa502' };
   }
 
   function applyLanguageUI(lang, article) {
@@ -124,8 +124,10 @@
     sourceEl.textContent = article?.source || '';
     const badge = criticalBadge(article?.critical_level);
     if (badge) {
-      badgeEl.textContent = badge;
+      badgeEl.textContent = badge.text;
       badgeEl.style.display = '';
+      badgeEl.style.borderColor = badge.color;
+      badgeEl.style.color = badge.color;
     } else {
       badgeEl.style.display = 'none';
     }
