@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PULSE - 文章詳情</title>
+  <meta name="description" content="PULSE 文章詳情頁面">
+
+  <link rel="icon" type="image/png" href="../app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Language Selector (shared) -->
+  <div class="language-selector">
+    <button class="lang-btn" data-lang="zh-TW" aria-label="繁體中文">繁</button>
+    <button class="lang-btn" data-lang="zh-CN" aria-label="简体中文">简</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="masthead">
+        <img src="../app-icon.png" alt="PULSE" class="app-logo">
+        <h1 class="logo" lang="en">PULSE</h1>
+        <p class="tagline">BUSINESS NEWS</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="about">
+      <div class="article-container">
+        <a class="back-link" href="../index.html">← 返回首頁</a>
+
+        <div id="notice" class="notice" style="display:none"></div>
+
+        <div id="article" class="article-card" aria-live="polite">
+          <div class="article-header">
+            <h2 id="title" class="article-title">載入中...</h2>
+            <div id="meta" class="article-meta"></div>
+          </div>
+
+          <div class="article-actions">
+            <a id="originalLink" class="btn btn-secondary" href="#" target="_blank" rel="noopener noreferrer">View Original Content</a>
+          </div>
+
+          <p id="summary" class="article-summary"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 PULSE. <span>保留所有權利。</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../lang.js"></script>
+  <script src="article.js"></script>
+</body>
+</html>
+

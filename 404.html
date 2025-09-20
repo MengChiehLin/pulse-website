@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PULSE - Not Found</title>
+  <meta http-equiv="refresh" content="3; url=/index.html">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <script>
+    (function() {
+      try {
+        var path = (window.location.pathname || '');
+        var parts = path.split('/').filter(Boolean);
+        // If path looks like /article/{hash}, redirect to SPA article page with query param
+        if (parts.length >= 2 && parts[0] === 'article') {
+          var hash = encodeURIComponent(parts[1] || '');
+          if (hash) {
+            window.location.replace('/article/index.html?id=' + hash + window.location.search.replace(/^\?/, '&'));
+            return;
+          }
+        }
+      } catch (e) {}
+      // Fallback to home after brief delay
+      setTimeout(function(){ window.location.replace('/index.html'); }, 1000);
+    })();
+  </script>
+  <div class="article-container">
+    <h1 class="article-title">頁面未找到</h1>
+    <p class="article-summary">將自動返回首頁...</p>
+  </div>
+</body>
+</html>
+

@@ -63,54 +63,43 @@ async function switchLegalLanguage(lang) {
     document.title = translations.pageTitle;
     document.documentElement.lang = lang;
     
-    // Update language buttons
+    // Update language buttons (centralized markup uses data-lang)
     document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('onclick').includes(`'${lang}'`)) {
-            btn.classList.add('active');
-        }
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
     
     // Update back link
     const backLink = document.querySelector('.back-link');
     if (backLink) backLink.textContent = translations.backToHome;
     
-    // Replace main content completely using the comprehensive mainContent
-    const contentContainer = document.querySelector('.legal-content');
-    if (contentContainer && translations.mainContent) {
-        // Find the back link and language selector to preserve them
-        const backLinkHtml = backLink ? backLink.outerHTML : '';
-        const languageSelector = document.querySelector('.language-selector');
-        const languageSelectorHtml = languageSelector ? languageSelector.outerHTML : '';
-        
-        // Replace the content while preserving back link and language selector
-        contentContainer.innerHTML = `
-            ${backLinkHtml}
-            ${languageSelectorHtml}
-            ${translations.mainContent}
-        `;
+    // Prefer updating only the dynamic content area if available
+    const dynamic = document.getElementById('dynamic-content');
+    if (dynamic && translations.mainContent) {
+        dynamic.innerHTML = translations.mainContent;
+    } else {
+        // Fallback: replace whole legal-content while preserving controls
+        const contentContainer = document.querySelector('.legal-content');
+        if (contentContainer && translations.mainContent) {
+            const backLinkHtml = backLink ? backLink.outerHTML : '';
+            const languageSelector = document.querySelector('.language-selector');
+            const languageSelectorHtml = languageSelector ? languageSelector.outerHTML : '';
+            contentContainer.innerHTML = `
+                ${backLinkHtml}
+                ${languageSelectorHtml}
+                ${translations.mainContent}
+            `;
+        }
     }
     
-    // Store language preference in localStorage
-    localStorage.setItem('pulseLanguage', lang);
+    // Persisting selection is handled by centralized language manager
 }
 
 // Function to get language preference from main site or localStorage
 function getLanguagePreference() {
-    // Check URL parameters first (for navigation from main site)
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlLang = urlParams.get('lang');
-    if (urlLang && ['zh-TW', 'zh-CN', 'en'].includes(urlLang)) {
-        return urlLang;
+    // Use centralized language manager if available
+    if (typeof window.getPulseLanguage === 'function') {
+        return window.getPulseLanguage();
     }
-    
-    // Check localStorage
-    const savedLang = localStorage.getItem('pulseLanguage');
-    if (savedLang && ['zh-TW', 'zh-CN', 'en'].includes(savedLang)) {
-        return savedLang;
-    }
-    
-    // Default to Traditional Chinese
     return 'zh-TW';
 }
 
@@ -118,4 +107,9 @@ function getLanguagePreference() {
 document.addEventListener('DOMContentLoaded', async function() {
     const preferredLang = getLanguagePreference();
     await switchLegalLanguage(preferredLang);
+    // Listen for centralized language changes
+    window.addEventListener('pulse:lang-change', async (e) => {
+        const lang = (e && e.detail && e.detail.lang) || preferredLang;
+        await switchLegalLanguage(lang);
+    });
 });

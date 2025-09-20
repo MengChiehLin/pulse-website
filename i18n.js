@@ -161,14 +161,15 @@ function applyTranslations(lang) {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Apply saved or default language
-    applyTranslations(currentLang);
-    
-    // Setup language switcher buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const lang = e.currentTarget.getAttribute('data-lang');
-            applyTranslations(lang);
-        });
+    // Use centralized language manager if available
+    const initLang = typeof window.getPulseLanguage === 'function' 
+        ? window.getPulseLanguage() 
+        : currentLang;
+    applyTranslations(initLang);
+
+    // React to centralized language changes
+    window.addEventListener('pulse:lang-change', (e) => {
+        const lang = (e && e.detail && e.detail.lang) || initLang;
+        applyTranslations(lang);
     });
 });

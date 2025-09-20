@@ -53,31 +53,6 @@
         .back-link:hover {
             text-decoration: underline;
         }
-        .language-selector {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 2rem;
-            justify-content: center;
-        }
-        .lang-btn {
-            background: var(--bg-card);
-            border: 1px solid var(--border-light);
-            color: var(--text-secondary);
-            padding: 8px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.875rem;
-            transition: all 0.3s ease;
-        }
-        .lang-btn:hover {
-            color: var(--primary);
-            border-color: var(--accent);
-        }
-        .lang-btn.active {
-            background-color: var(--gold);
-            color: var(--bg-primary);
-            border-color: var(--gold);
-        }
         .toc {
             background-color: rgba(108, 123, 149, 0.1);
             padding: 1.5rem;
@@ -117,11 +92,11 @@
     <div class="legal-content">
         <a href="index.html" class="back-link">← 返回首頁</a>
         
-        <!-- Language Selector -->
+        <!-- Language Selector (centralized) -->
         <div class="language-selector">
-            <button class="lang-btn active" onclick="switchLegalLanguage('zh-TW')">繁體中文</button>
-            <button class="lang-btn" onclick="switchLegalLanguage('zh-CN')">简体中文</button>
-            <button class="lang-btn" onclick="switchLegalLanguage('en')">English</button>
+            <button class="lang-btn" data-lang="zh-TW" aria-label="繁體中文">繁</button>
+            <button class="lang-btn" data-lang="zh-CN" aria-label="简体中文">简</button>
+            <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
         </div>
         
         <!-- Content will be loaded dynamically by JavaScript -->
@@ -131,6 +106,7 @@
         </div>
     </div>
     
-    <script src="legal-i18n.js"></script>
+    <script src="lang.js?v=1"></script>
+    <script src="legal-i18n.js?v=1"></script>
 </body>
 </html>
