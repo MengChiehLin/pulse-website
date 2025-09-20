@@ -115,8 +115,10 @@
     summaryEl.textContent = summaryText || '';
 
     // Meta and actions
-    // Only show time/date in meta to avoid duplicate source line
-    metaEl.textContent = article?.publishedAt ? fmtDate(article.publishedAt) : '';
+    const metaBits = [];
+    if (article?.source) metaBits.push(article.source);
+    if (article?.publishedAt) metaBits.push(fmtDate(article.publishedAt));
+    metaEl.textContent = metaBits.join(' · ');
 
     // Top-left source label and badge
     sourceEl.textContent = article?.source || '';
