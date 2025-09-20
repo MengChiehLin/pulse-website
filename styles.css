@@ -103,6 +103,8 @@ body {
     padding: 8px;
 }
 
+/* .brand no longer used after revert */
+
 .logo {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
@@ -492,6 +494,7 @@ body {
     .logo {
         font-size: 2.5rem;
     }
+    .app-logo { width: 80px; height: 80px; }
     
     .app-logo {
         width: 80px;
@@ -582,6 +585,18 @@ body {
     background-color: var(--bg-card);
     border: 1px solid var(--border-light);
     border-radius: 12px;
-    padding: 1.25rem 1.25rem 1.5rem;
+    padding: 1rem 1rem 1rem;
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.15);
 }
 .article-summary { color: var(--text-secondary); line-height: 1.8; white-space: pre-wrap; }
+
+.top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.article-source { color: var(--text-muted); font-weight: 700; letter-spacing: 0.02em; }
+.article-badge { background: #d35400; color: #fff; border-radius: 6px; padding: 3px 8px; font-size: 0.75rem; font-weight: 700; }
+.article-meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px; }
+.article-title { margin-top: 6px; }
+.bottom-row { display: flex; justify-content: flex-end; margin-top: 10px; }
+.level-chip { background: #444; color: #bbb; padding: 2px 8px; border-radius: 6px; font-size: 0.75rem; }
+
+.article-actions { margin-top: 16px; display: flex; justify-content: center; }
+.btn-primary { min-width: 260px; text-align: center; }

@@ -35,16 +35,22 @@
         <div id="notice" class="notice" style="display:none"></div>
 
         <div id="article" class="article-card" aria-live="polite">
+          <div class="top-row">
+            <span id="source" class="article-source"></span>
+            <span id="badge" class="article-badge" style="display:none"></span>
+          </div>
+          <div id="meta" class="article-meta"></div>
           <div class="article-header">
             <h2 id="title" class="article-title">載入中...</h2>
-            <div id="meta" class="article-meta"></div>
           </div>
-
-          <div class="article-actions">
-            <a id="originalLink" class="btn btn-secondary" href="#" target="_blank" rel="noopener noreferrer">View Original Content</a>
-          </div>
-
           <p id="summary" class="article-summary"></p>
+          <div class="bottom-row">
+            <span id="level" class="level-chip" style="display:none"></span>
+          </div>
+        </div>
+
+        <div class="article-actions">
+          <a id="originalLink" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">View Original Article</a>
         </div>
       </div>
     </section>
@@ -62,4 +68,3 @@
   <script src="article.js"></script>
 </body>
 </html>
-

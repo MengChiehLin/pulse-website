@@ -11,6 +11,9 @@
   const summaryEl = document.getElementById('summary');
   const originalLinkEl = document.getElementById('originalLink');
   const noticeEl = document.getElementById('notice');
+  const sourceEl = document.getElementById('source');
+  const badgeEl = document.getElementById('badge');
+  const levelEl = document.getElementById('level');
 
   function getUrlHash() {
     try {
@@ -54,6 +57,30 @@
     return data.article || null;
   }
 
+  function t(key, lang) {
+    const dict = {
+      'button.viewOriginal': {
+        'zh-TW': '閱讀原始文章',
+        'zh-CN': '阅读原始文章',
+        'en': 'View Original Article'
+      },
+      'notice.english': {
+        'zh-TW': '顯示中文翻譯。如需英文，請閱讀原始文章。',
+        'zh-CN': '显示中文翻译。如需英文，请阅读原始文章。',
+        'en': 'Chinese translation is shown. For English, view the original source.'
+      }
+    };
+    const table = dict[key] || {};
+    return table[lang] || table['zh-TW'] || '';
+  }
+
+  function criticalBadge(level) {
+    if (typeof level !== 'number') return null;
+    if (level >= 5) return 'BREAKING';
+    if (level >= 4) return 'IMPORTANT';
+    return null;
+  }
+
   function applyLanguageUI(lang, article) {
     // Toggle central active state is handled by lang.js
     // Set page title/meta description based on language
@@ -64,20 +91,21 @@
     } else {
       document.title = (article?.title?.traditional_chinese || 'PULSE 文章詳情') + ' - PULSE';
     }
+
+    // Localize the button and notice
+    originalLinkEl.textContent = t('button.viewOriginal', lang);
+    if (lang === 'en') {
+      noticeEl.style.display = '';
+      noticeEl.textContent = t('notice.english', lang);
+    } else {
+      noticeEl.style.display = 'none';
+      noticeEl.textContent = '';
+    }
   }
 
   function renderArticle(article) {
     const currentLang = (typeof window.getPulseLanguage === 'function') ? window.getPulseLanguage() : 'zh-TW';
     const key = langKeyForArticle(currentLang);
-
-    // Notice for English selection
-    if (currentLang === 'en') {
-      noticeEl.style.display = '';
-      noticeEl.textContent = 'Chinese translation is shown. For English, view the original source.';
-    } else {
-      noticeEl.style.display = 'none';
-      noticeEl.textContent = '';
-    }
 
     // Title and Summary
     const titleText = article?.title?.[key] || article?.title?.traditional_chinese || article?.originalTitle || '';
@@ -92,11 +120,29 @@
     if (article?.publishedAt) metaBits.push(fmtDate(article.publishedAt));
     metaEl.textContent = metaBits.join(' · ');
 
+    // Top-left source label and badge
+    sourceEl.textContent = article?.source || '';
+    const badge = criticalBadge(article?.critical_level);
+    if (badge) {
+      badgeEl.textContent = badge;
+      badgeEl.style.display = '';
+    } else {
+      badgeEl.style.display = 'none';
+    }
+
     if (article?.url) {
       originalLinkEl.href = article.url;
       originalLinkEl.style.display = '';
     } else {
       originalLinkEl.style.display = 'none';
+    }
+
+    // Bottom-right critical level chip
+    if (typeof article?.critical_level === 'number') {
+      levelEl.textContent = 'level: ' + String(article.critical_level);
+      levelEl.style.display = '';
+    } else {
+      levelEl.style.display = 'none';
     }
 
     applyLanguageUI(currentLang, article);
@@ -134,4 +180,3 @@
 
   document.addEventListener('DOMContentLoaded', init);
 })();
-
