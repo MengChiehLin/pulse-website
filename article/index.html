@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PULSE - 文章詳情</title>
-  <meta name="description" content="PULSE 文章詳情頁面">
+  <title>PULSE - Article</title>
+  <meta name="description" content="PULSE Article Detail Page">
 
   <link rel="icon" type="image/png" href="../app-icon.png">
   <link rel="stylesheet" href="../styles.css">
@@ -22,7 +22,7 @@
       <div class="masthead">
         <img src="../app-icon.png" alt="PULSE" class="app-logo">
         <h1 class="logo" lang="en">PULSE</h1>
-        <p class="tagline">BUSINESS NEWS</p>
+        <p id="tagline" class="tagline">BUSINESS NEWS</p>
       </div>
     </div>
   </header>
@@ -30,7 +30,7 @@
   <main>
     <section class="about">
       <div class="article-container">
-        <a class="back-link" href="../index.html">← 返回首頁</a>
+        <a id="backLink" class="back-link" href="../index.html">← Home</a>
 
         <div id="notice" class="notice" style="display:none"></div>
 
@@ -41,7 +41,7 @@
           </div>
           <div id="meta" class="article-meta"></div>
           <div class="article-header">
-            <h2 id="title" class="article-title">載入中...</h2>
+            <h2 id="title" class="article-title"><span class="spinner" role="status" aria-label="Loading"></span></h2>
           </div>
           <p id="summary" class="article-summary"></p>
           <div class="bottom-row">
@@ -59,7 +59,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-bottom">
-        <p>&copy; 2025 PULSE. <span>保留所有權利。</span></p>
+        <p>&copy; 2025 PULSE. <span id="rightsText">All rights reserved.</span></p>
       </div>
     </div>
   </footer>

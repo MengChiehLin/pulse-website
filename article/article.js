@@ -14,6 +14,9 @@
   const sourceEl = document.getElementById('source');
   const badgeEl = document.getElementById('badge');
   const levelEl = document.getElementById('level');
+  const backLinkEl = document.getElementById('backLink');
+  const rightsEl = document.getElementById('rightsText');
+  const taglineEl = document.getElementById('tagline');
 
   function getUrlHash() {
     try {
@@ -68,6 +71,71 @@
         'zh-TW': '顯示中文翻譯。如需英文，請閱讀原始文章。',
         'zh-CN': '显示中文翻译。如需英文，请阅读原始文章。',
         'en': 'Chinese translation is shown. For English, view the original source.'
+      },
+      'link.backHome': {
+        'zh-TW': '返回首頁',
+        'zh-CN': '返回首页',
+        'en': 'Back to Home'
+      },
+      'footer.rights': {
+        'zh-TW': '保留所有權利。',
+        'zh-CN': '保留所有权利。',
+        'en': 'All rights reserved.'
+      },
+      'header.tagline': {
+        'zh-TW': '即時商業新聞快訊',
+        'zh-CN': '即时商业新闻快讯',
+        'en': 'BUSINESS NEWS'
+      },
+      'meta.articleDesc': {
+        'zh-TW': 'PULSE 文章詳情頁面',
+        'zh-CN': 'PULSE 文章详情页面',
+        'en': 'PULSE Article Detail Page'
+      },
+      'meta.articlePageTitle': {
+        'zh-TW': 'PULSE 文章詳情',
+        'zh-CN': 'PULSE 文章详情',
+        'en': 'PULSE Article'
+      },
+      'error.notFound': {
+        'zh-TW': '找不到文章',
+        'zh-CN': '未找到文章',
+        'en': 'Article not found'
+      },
+      'error.checkLink': {
+        'zh-TW': '請確認連結是否正確。',
+        'zh-CN': '请确认链接是否正确。',
+        'en': 'Please verify the link.'
+      },
+      'error.invalidId': {
+        'zh-TW': '缺少或無效的文章識別碼',
+        'zh-CN': '缺少或无效的文章标识',
+        'en': 'Missing or invalid article ID'
+      },
+      'error.removed': {
+        'zh-TW': '文章不存在或已被移除',
+        'zh-CN': '文章不存在或已被移除',
+        'en': 'The article does not exist or was removed'
+      },
+      'error.load': {
+        'zh-TW': '載入文章時發生錯誤',
+        'zh-CN': '加载文章时发生错误',
+        'en': 'An error occurred while loading the article'
+      },
+      'error.generic': {
+        'zh-TW': '請稍後再試。',
+        'zh-CN': '请稍后重试。',
+        'en': 'Please try again later.'
+      },
+      'label.level': {
+        'zh-TW': '等級：',
+        'zh-CN': '等级：',
+        'en': 'Level: '
+      },
+      'article.noTitle': {
+        'zh-TW': '無標題文章',
+        'zh-CN': '无标题文章',
+        'en': 'Untitled'
       }
     };
     const table = dict[key] || {};
@@ -85,11 +153,11 @@
     // Toggle central active state is handled by lang.js
     // Set page title/meta description based on language
     if (lang === 'zh-CN') {
-      document.title = (article?.title?.simple_chinese || 'PULSE 文章詳情') + ' - PULSE';
+      document.title = (article?.title?.simple_chinese || t('meta.articlePageTitle', lang)) + ' - PULSE';
     } else if (lang === 'en') {
-      document.title = (article?.originalTitle || 'PULSE Article') + ' - PULSE';
+      document.title = (article?.originalTitle || t('meta.articlePageTitle', lang)) + ' - PULSE';
     } else {
-      document.title = (article?.title?.traditional_chinese || 'PULSE 文章詳情') + ' - PULSE';
+      document.title = (article?.title?.traditional_chinese || t('meta.articlePageTitle', lang)) + ' - PULSE';
     }
 
     // Localize the button and notice
@@ -101,6 +169,21 @@
       noticeEl.style.display = 'none';
       noticeEl.textContent = '';
     }
+
+    // Back link, footer rights, header tagline
+    if (backLinkEl) backLinkEl.textContent = '← ' + t('link.backHome', lang);
+    if (rightsEl) rightsEl.textContent = t('footer.rights', lang);
+    if (taglineEl) taglineEl.textContent = t('header.tagline', lang);
+
+    // Meta description (fallback if article summary unavailable)
+    try {
+      const metaDescEl = document.querySelector('meta[name="description"]');
+      if (metaDescEl) {
+        const key = langKeyForArticle(lang);
+        const descFromArticle = article?.summary?.[key] || article?.summary?.traditional_chinese || '';
+        metaDescEl.setAttribute('content', descFromArticle || t('meta.articleDesc', lang));
+      }
+    } catch (_) {}
   }
 
   function renderArticle(article) {
@@ -111,7 +194,7 @@
     const titleText = article?.title?.[key] || article?.title?.traditional_chinese || article?.originalTitle || '';
     const summaryText = article?.summary?.[key] || article?.summary?.traditional_chinese || '';
 
-    titleEl.textContent = titleText || '無標題文章';
+    titleEl.textContent = titleText || t('article.noTitle', currentLang);
     summaryEl.textContent = summaryText || '';
 
     // Meta and actions
@@ -139,7 +222,8 @@
 
     // Bottom-right critical level chip
     if (typeof article?.critical_level === 'number') {
-      levelEl.textContent = 'level: ' + String(article.critical_level);
+      const currentLang = (typeof window.getPulseLanguage === 'function') ? window.getPulseLanguage() : 'zh-TW';
+      levelEl.textContent = t('label.level', currentLang) + String(article.critical_level);
       levelEl.style.display = '';
     } else {
       levelEl.style.display = 'none';
@@ -148,31 +232,44 @@
     applyLanguageUI(currentLang, article);
   }
 
-  function renderError(message) {
-    titleEl.textContent = '找不到文章';
+  function renderError(titleKey, bodyKey) {
+    const currentLang = (typeof window.getPulseLanguage === 'function') ? window.getPulseLanguage() : 'zh-TW';
+    titleEl.textContent = t(titleKey, currentLang) || t('error.notFound', currentLang);
     metaEl.textContent = '';
-    summaryEl.textContent = message || '請確認連結是否正確。';
+    summaryEl.textContent = t(bodyKey, currentLang) || '';
     originalLinkEl.style.display = 'none';
   }
 
   async function init() {
+    const initLang = (typeof window.getPulseLanguage === 'function') ? window.getPulseLanguage() : 'zh-TW';
+    applyLanguageUI(initLang, null);
+
+    // Handle language changes; re-render if article is available
+    let currentArticle = null;
+    window.addEventListener('pulse:lang-change', (e) => {
+      const lang = (e && e.detail && e.detail.lang) || initLang;
+      if (currentArticle) {
+        renderArticle(currentArticle);
+      } else {
+        applyLanguageUI(lang, null);
+      }
+    });
+
     const urlHash = getUrlHash();
     if (!urlHash || !/^[a-fA-F0-9]{8,}$/.test(urlHash)) {
-      renderError('缺少或無效的文章識別碼');
+      renderError('error.invalidId', 'error.checkLink');
       return;
     }
     try {
       const article = await fetchArticle(urlHash);
       if (!article) {
-        renderError('文章不存在或已被移除');
+        renderError('error.notFound', 'error.removed');
         return;
       }
+      currentArticle = article;
       renderArticle(article);
-
-      // Re-render on language change
-      window.addEventListener('pulse:lang-change', () => renderArticle(article));
     } catch (err) {
-      renderError('載入文章時發生錯誤');
+      renderError('error.load', 'error.generic');
       // eslint-disable-next-line no-console
       console.error(err);
     }
