@@ -83,8 +83,8 @@
         'en': 'All rights reserved.'
       },
       'header.tagline': {
-        'zh-TW': '即時商業新聞快訊',
-        'zh-CN': '即时商业新闻快讯',
+        'zh-TW': 'BUSINESS NEWS',
+        'zh-CN': 'BUSINESS NEWS',
         'en': 'BUSINESS NEWS'
       },
       'meta.articleDesc': {
@@ -195,6 +195,7 @@
     const summaryText = article?.summary?.[key] || article?.summary?.traditional_chinese || '';
 
     titleEl.textContent = titleText || t('article.noTitle', currentLang);
+    try { titleEl.classList.remove('loading'); } catch (_) {}
     summaryEl.textContent = summaryText || '';
 
     // Meta and actions
@@ -238,6 +239,7 @@
     metaEl.textContent = '';
     summaryEl.textContent = t(bodyKey, currentLang) || '';
     originalLinkEl.style.display = 'none';
+    try { titleEl.classList.remove('loading'); } catch (_) {}
   }
 
   async function init() {
