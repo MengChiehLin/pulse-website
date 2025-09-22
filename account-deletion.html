@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PULSE帳戶刪除 - 了解如何請求刪除您的PULSE帳戶和相關資料。包含詳細步驟、資料處理說明和處理時間。">
+    <title data-i18n="deletion.title">帳戶刪除 - PULSE</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="帳戶刪除 - PULSE">
+    <meta property="og:description" content="了解如何請求刪除您的PULSE帳戶和相關資料。包含詳細步驟和處理時間。">
+    <meta property="og:image" content="https://pulse-news.app/app-icon.png">
+    <meta property="og:url" content="https://pulse-news.app/account-deletion.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PULSE">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="帳戶刪除 - PULSE">
+    <meta name="twitter:description" content="了解如何請求刪除您的PULSE帳戶和相關資料。">
+    <meta name="twitter:image" content="https://pulse-news.app/app-icon.png">
+
+    <link rel="canonical" href="https://pulse-news.app/account-deletion.html">
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .legal-content h1 {
+            font-family: Georgia, serif;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+        .legal-content h2 {
+            font-family: Georgia, serif;
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .legal-content h3 {
+            font-family: Georgia, serif;
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        .legal-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+        .legal-content ul, .legal-content ol {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+            padding-left: 2rem;
+        }
+        .legal-content li {
+            margin-bottom: 0.5rem;
+        }
+        .contact-info {
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--gold);
+        }
+        .contact-info h3 {
+            margin-top: 0;
+            color: var(--gold);
+        }
+        .contact-info a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .deletion-steps {
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .deletion-steps h3 {
+            margin-top: 0;
+            color: var(--gold);
+        }
+        .deletion-steps ol {
+            margin-left: 0;
+            padding-left: 1.5rem;
+        }
+        .deletion-steps li {
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+        .data-section {
+            margin: 2rem 0;
+        }
+        .data-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 768px) {
+            .data-list {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        .data-category {
+            background-color: var(--bg-card);
+            padding: 1.2rem;
+            border-radius: 8px;
+        }
+        .data-category h4 {
+            color: var(--gold);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .data-category ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+        .data-category li {
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+        }
+        .timeline {
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        .timeline h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .back-link {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .back-link a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="lang-btn" data-lang="zh-TW" aria-label="繁體中文">繁</button>
+        <button class="lang-btn" data-lang="zh-CN" aria-label="简体中文">简</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    </div>
+</head>
+<body>
+    <div class="legal-content">
+        <h1 data-i18n="deletion.heading">PULSE 帳戶刪除</h1>
+
+        <p data-i18n="deletion.intro">
+            您可以直接在 PULSE 應用程式內刪除您的帳戶。此頁面說明帳戶刪除程序、資料處理方式，以及訂閱管理相關資訊。
+        </p>
+
+        <div class="deletion-steps">
+            <h3 data-i18n="deletion.steps.title">如何刪除帳戶</h3>
+            <ol>
+                <li data-i18n="deletion.steps.step1">開啟 PULSE 應用程式</li>
+                <li data-i18n="deletion.steps.step2">前往 <strong>個人檔案 (Profile)</strong> 頁面</li>
+                <li data-i18n="deletion.steps.step3">滑到最下方的 <strong>帳戶管理</strong> 部分</li>
+                <li data-i18n="deletion.steps.step4">點擊 <strong>刪除帳戶</strong></li>
+                <li data-i18n="deletion.steps.step5">確認刪除 - <strong>此操作立即生效且無法復原</strong></li>
+            </ol>
+        </div>
+
+        <div class="contact-info">
+            <h3 data-i18n="deletion.contact.title">需要協助？</h3>
+            <p data-i18n="deletion.contact.email">
+                如果您在刪除帳戶時遇到困難，請聯繫我們：<a href="mailto:support@pulse-news.app">support@pulse-news.app</a>
+            </p>
+            <p data-i18n="deletion.contact.note">
+                我們的支援團隊將協助您解決任何帳戶刪除相關問題。
+            </p>
+        </div>
+
+        <div class="timeline">
+            <h3 data-i18n="deletion.subscription.title">訂閱管理重要須知</h3>
+            <p data-i18n="deletion.subscription.iap">
+                <strong>您的訂閱由 Apple App Store 或 Google Play Store 管理</strong>，而非 PULSE 直接管理。
+            </p>
+            <ul>
+                <li data-i18n="deletion.subscription.cancel"><strong>取消訂閱</strong>：請至您的 iPhone/iPad「設定」>「Apple ID」>「訂閱」，或 Android「Google Play Store」>「訂閱」</li>
+                <li data-i18n="deletion.subscription.independent">帳戶刪除和訂閱取消是獨立操作</li>
+                <li data-i18n="deletion.subscription.recommendation">建議先取消訂閱，再刪除帳戶</li>
+            </ul>
+        </div>
+
+        <div class="data-section">
+            <h2 data-i18n="deletion.data.title">資料處理說明</h2>
+
+            <div class="data-list">
+                <div class="data-category">
+                    <h4 data-i18n="deletion.data.deleted.title">將被完全刪除的資料</h4>
+                    <ul>
+                        <li data-i18n="deletion.data.deleted.profile">用戶個人資料和帳戶資訊</li>
+                        <li data-i18n="deletion.data.deleted.email">註冊電子郵件地址</li>
+                        <li data-i18n="deletion.data.deleted.reading">閱讀歷史和偏好設定</li>
+                        <li data-i18n="deletion.data.deleted.notifications">推播通知設定和裝置代碼</li>
+                        <li data-i18n="deletion.data.deleted.devices">所有登入資訊和會話資料</li>
+                        <li data-i18n="deletion.data.deleted.subscription">PULSE 內的訂閱狀態記錄</li>
+                        <li data-i18n="deletion.data.deleted.usage">所有應用程式使用記錄</li>
+                    </ul>
+                </div>
+
+                <div class="data-category">
+                    <h4 data-i18n="deletion.data.retained.title">非 PULSE 管理的資料</h4>
+                    <ul>
+                        <li data-i18n="deletion.data.retained.billing">購買記錄由 Apple/Google 管理</li>
+                        <li data-i18n="deletion.data.retained.anonymized">訂閱歷史由 Apple/Google 保存</li>
+                        <li data-i18n="deletion.data.retained.legal">付款資訊由 Apple/Google 處理</li>
+                        <li data-i18n="deletion.data.retained.tax">退款爭議請聯繫 Apple/Google</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <h3 data-i18n="deletion.timeline.title">刪除時程</h3>
+            <ul>
+                <li data-i18n="deletion.timeline.confirmation"><strong>立即生效</strong>：在應用程式內確認刪除後立即執行</li>
+                <li data-i18n="deletion.timeline.processing"><strong>即時完成</strong>：所有 PULSE 資料立即從我們的系統中移除</li>
+                <li data-i18n="deletion.timeline.completion"><strong>無法復原</strong>：刪除操作完成後無法恢復任何資料</li>
+            </ul>
+        </div>
+
+        <h2 data-i18n="deletion.important.title">重要注意事項</h2>
+        <ul>
+            <li data-i18n="deletion.important.irreversible">帳戶刪除是不可逆的操作，立即生效</li>
+            <li data-i18n="deletion.important.access">刪除後將無法訪問任何 PULSE 服務</li>
+            <li data-i18n="deletion.important.subscription">PULSE 不會取消您的 Apple/Google 訂閱</li>
+            <li data-i18n="deletion.important.reregistration">如需重新使用服務，須重新註冊新帳戶</li>
+            <li data-i18n="deletion.important.nodata">我們不保留任何用戶資料，所有資料將被永久刪除</li>
+        </ul>
+
+        <h2 data-i18n="deletion.legal.title">法律依據</h2>
+        <p data-i18n="deletion.legal.gdpr">
+            根據 GDPR（一般資料保護規則）第 17 條和 CCPA（加州消費者隱私法）規定，用戶有權要求刪除其個人資料。PULSE 完全遵守相關法規，確保用戶權益得到保障。
+        </p>
+
+        <div class="back-link">
+            <a href="index.html" data-i18n="deletion.back">← 返回首頁</a>
+        </div>
+    </div>
+
+    <script src="lang.js"></script>
+    <script src="i18n.js"></script>
+</body>
+</html>
