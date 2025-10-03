@@ -299,17 +299,17 @@ function applyTranslations(lang) {
 
 // Update store badges based on language
 function updateStoreBadges(lang) {
-    const badgeSuffix = lang === 'zh-TW' ? 'TW' : lang === 'zh-CN' ? 'CN' : 'US';
+    const badgeSuffix = lang === 'zh-TW' ? 'tw' : lang === 'zh-CN' ? 'cn' : 'en';
 
     const appStoreBadge = document.getElementById('appStoreBadge');
     const googlePlayBadge = document.getElementById('googlePlayBadge');
 
     if (appStoreBadge) {
-        appStoreBadge.src = `assets/Download_App_Store_Badge_${badgeSuffix}.svg`;
+        appStoreBadge.src = `assets/app-store-${badgeSuffix}.png`;
     }
 
     if (googlePlayBadge) {
-        googlePlayBadge.src = `assets/GetItOnGooglePlay_Badge_${badgeSuffix}.png`;
+        googlePlayBadge.src = `assets/google-play-${badgeSuffix}.png`;
     }
 }
 
