@@ -261,10 +261,10 @@ let currentLang = localStorage.getItem('selectedLanguage') || 'zh-TW';
 function applyTranslations(lang) {
     currentLang = lang;
     localStorage.setItem('selectedLanguage', lang);
-    
+
     // Update HTML lang attribute
     document.documentElement.lang = lang;
-    
+
     // Update all translatable elements
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
@@ -272,7 +272,7 @@ function applyTranslations(lang) {
             element.textContent = translations[lang][key];
         }
     });
-    
+
     // Update active language button
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -280,7 +280,10 @@ function applyTranslations(lang) {
             btn.classList.add('active');
         }
     });
-    
+
+    // Update store badges based on language
+    updateStoreBadges(lang);
+
     // Update page title and meta description
     if (lang === 'zh-TW') {
         document.title = 'PULSE - 即時商業新聞快訊';
@@ -291,6 +294,22 @@ function applyTranslations(lang) {
     } else {
         document.title = 'PULSE - Critical Business News Alerts';
         document.querySelector('meta[name="description"]').content = 'PULSE - AI-powered critical news alerts delivered directly to your mobile device. Real-time international business news with intelligent curation.';
+    }
+}
+
+// Update store badges based on language
+function updateStoreBadges(lang) {
+    const badgeSuffix = lang === 'zh-TW' ? 'TW' : lang === 'zh-CN' ? 'CN' : 'US';
+
+    const appStoreBadge = document.getElementById('appStoreBadge');
+    const googlePlayBadge = document.getElementById('googlePlayBadge');
+
+    if (appStoreBadge) {
+        appStoreBadge.src = `assets/Download_App_Store_Badge_${badgeSuffix}.svg`;
+    }
+
+    if (googlePlayBadge) {
+        googlePlayBadge.src = `assets/GetItOnGooglePlay_Badge_${badgeSuffix}.png`;
     }
 }
 

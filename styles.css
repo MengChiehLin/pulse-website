@@ -146,12 +146,30 @@ body {
     line-height: 1.7;
 }
 
-/* CTA Buttons */
+/* CTA Buttons & Store Badges */
 .cta-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.store-badge-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.store-badge-link:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.store-badge {
+    height: 55px;
+    width: 185px;
+    display: block;
+    object-fit: contain;
 }
 
 .btn {
@@ -487,26 +505,31 @@ body {
         right: 10px;
         padding: 6px;
     }
-    
+
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .logo {
         font-size: 2.5rem;
     }
     .app-logo { width: 80px; height: 80px; }
-    
+
     .app-logo {
         width: 80px;
         height: 80px;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
+    .store-badge {
+        height: 48px;
+        width: 160px;
+    }
+
     .btn {
         width: 100%;
         max-width: 300px;
